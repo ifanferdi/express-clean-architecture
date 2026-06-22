@@ -1,0 +1,1231 @@
+{
+  "info": {
+    "_postman_id": "0ba59001-d800-42f7-8b2e-0a1067948dca",
+    "name": "Express JS Clean Architecture",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18551504"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get User",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "user_id",
+                "value": "2",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "-1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "id",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "createdAt",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "password",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "marcia",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "createdAt:asc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "username:desc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "110",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "87",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId",
+                  "value": "110",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "usernames[]",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "usernames[]",
+                  "value": "Norbert29",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "username",
+                  "value": "student100",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "isActive",
+                  "value": "false",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "roleId",
+                  "value": "a",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "role",
+                  "value": "admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "role[]",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "profile",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "soft-delete",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "roles",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "roles.permissions",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "permissions",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "profile",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page\": 1\n//   \"limit\": -1,\n//   \"columns\": [\"id\", \"createdAt\"]\n//   \"q\": \"robert\",\n//   \"sort\": [\"username\"],\n//   \"sortType\": [\"asc\"],\n//   \"year\": 2025,\n//   \"ids\": [3, 1],\n//   \"usernames\": [\"123213asdasd\", \"Norbert29\"],\n//   \"username\": \"instructor\",\n//   \"isActive\": 0,\n//   \"courseId\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/get",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "get"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get User By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/:id?with[]=profile&with[]=roles",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id"
+              ],
+              "query": [
+                {
+                  "key": "with[]",
+                  "value": "profile"
+                },
+                {
+                  "key": "with[]",
+                  "value": "roles"
+                },
+                {
+                  "key": "with[]",
+                  "value": "soft-delete",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"roleId\": 1,\r\n    \"username\": \"masmas\",\r\n    \"password\": \"masmas\",\r\n    \"confirmPassword\": \"masmas\",\r\n    \"isActive\": true,\r\n    \"profile\": {\r\n        \"fullName\": \"lorem\",\r\n        \"placeOfBirth\": \"Depok\",\r\n        \"dateOfBirth\": \"2001-01-01\",\r\n        \"age\": 19\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"roleId\": null,\r\n    \"username\": \"massssssssmas\",\r\n    \"password\": \"masmas\",\r\n    \"confirmPassword\":  \"masmas\",\r\n    \"isActive\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "53"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete User Permanently",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/:id/permanently",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id",
+                "permanently"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "110"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Restore Deleted User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/:id/restore",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                ":id",
+                "restore"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "53"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Upload Profile Picture",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "1e088cc9-f0d7-48b4-86f8-3f58d9616353",
+                  "value": null
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/users/profile/upload",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "profile",
+                "upload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Permission",
+      "item": [
+        {
+          "name": "Internal",
+          "item": [
+            {
+              "name": "User Check Permission",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userId\": 1,\r\n    \"permissions\": [\r\n        \"Show Role\",\r\n        \"Create Role\"\r\n    ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{typescript_url}}/api/v1/permissions/check-valid-permissions",
+                  "host": [
+                    "{{typescript_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "permissions",
+                    "check-valid-permissions"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Get All Permissions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/permissions",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "permissions"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "createdAt:asc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "name:desc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId",
+                  "value": "110",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "1//name:Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "Show My Dashboard",
+                  "disabled": true
+                },
+                {
+                  "key": "name[]",
+                  "value": "show my dashboard",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name[]",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "id",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "roles",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "roleId",
+                  "value": "3",
+                  "disabled": true
+                },
+                {
+                  "key": "roleId[]",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "roleId[]",
+                  "value": "2",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Permissions",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "sort[]",
+                  "value": "id",
+                  "type": "text"
+                },
+                {
+                  "key": "sortType[]",
+                  "value": "asc",
+                  "type": "text"
+                },
+                {
+                  "key": "ids[]",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "show my dashboard",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "names[]",
+                  "value": "show my dashboard",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/permissions/get",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "permissions",
+                "get"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Permission",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"new permission\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/permissions",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "permissions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Permission",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"update2 permission\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/permissions/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "permissions",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "35"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Permission",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/permissions/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "permissions",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "35"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Role",
+      "item": [
+        {
+          "name": "Get All Roles",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "user_id",
+                "value": "1",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "-1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "createdAt:asc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "orderBy[]",
+                  "value": "name:desc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId[]",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "notId",
+                  "value": "110",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "1",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name[]",
+                  "value": "Developer",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "name[]",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "userId",
+                  "value": "1",
+                  "disabled": true
+                },
+                {
+                  "key": "userId[]",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "permissionId",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "permissionId[]",
+                  "value": null,
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "users",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "name",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Roles",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "user_id",
+                "value": "4",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "page",
+                  "value": "2",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "5",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "sort[]",
+                  "value": "username",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "sortType",
+                  "value": "asc",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "3",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "ids[]",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "name",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "names[]",
+                  "value": "Developer",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "names[]",
+                  "value": "Admin",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "columns[]",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "03a7eea1-fdf1-4f9b-9819-b2e4b91b0ff5",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "permission",
+                  "type": "text",
+                  "uuid": "42af3c53-3168-4258-a014-69f6d13ba019"
+                },
+                {
+                  "key": "with[]",
+                  "value": "user",
+                  "type": "text",
+                  "uuid": "6602b43c-6a34-4707-a0b1-bca48f241d2e",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles/get",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles",
+                "get"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Role By Id",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "user_id",
+                "value": "4",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles",
+                ":id"
+              ],
+              "query": [
+                {
+                  "key": "with[]",
+                  "value": "users",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "with[]",
+                  "value": "permissions",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Role",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"sss\",\r\n    \"permissions\": [\r\n        \"show role\",\r\n        \"manage role\"\r\n    ]\r\n    // \"permissionIds\": [1,2,3,4,5]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Role",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Newssss\"\r\n    // \"permissions\": [\"create role\",\"update role\",\"delete role\"]\r\n    // \"permissionIds\": [1,2,3,4,5]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Role",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles/:id",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles",
+                ":id"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Permission",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"roleId\": 4,\r\n    \r\n    // UPSERT PERMISSION WITH PERMISSION NAME\r\n    // \"permissions\": [\"show question\", \"manage user\"]\r\n\r\n    // // UPSERT PERMISSION WITH PERMISSION ID\r\n    // \"permissionIds\": [1,2,3,4,5]\r\n\r\n    // // ADD SELECTED PERMISSION WITH PERMISSION NAME WITHOUT REMOVE CURRENT PERMISSION\r\n    // \"addPermissions\": [\"show knowledge\", \"analyze question\"]\r\n\r\n    // // REMOVE SELECTED PERMISSION\r\n    \"removePermissions\": [\r\n        \"analyze question\",\r\n        \"start exercise\"\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{typescript_url}}/api/v1/roles/assign-permissions",
+              "host": [
+                "{{typescript_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "roles",
+                "assign-permissions"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}

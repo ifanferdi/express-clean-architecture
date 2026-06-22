@@ -1,0 +1,11 @@
+.idea
+.vscode
+/node_modules/
+/dist/
+.env
+/storage/public
+.DS_Store
+/src/infrastructure/database/prisma/generated
+.vercel
+src/infrastructure/database/migrations
+!/docker/.env
