@@ -1,0 +1,9 @@
+FROM rabbitmq:3.13-management
+
+# Install rabbitmq_delayed_message_exchange plugin
+RUN apt-get update && apt-get install -y curl && \
+    DELAYED_MESSAGE_VERSION="3.13.0" && \
+    curl -L "https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/v${DELAYED_MESSAGE_VERSION}/rabbitmq_delayed_message_exchange-${DELAYED_MESSAGE_VERSION}.ez" \
+    -o /opt/rabbitmq/plugins/rabbitmq_delayed_message_exchange-${DELAYED_MESSAGE_VERSION}.ez && \
+    rabbitmq-plugins enable --offline rabbitmq_delayed_message_exchange && \
+    apt-get remove -y curl && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
