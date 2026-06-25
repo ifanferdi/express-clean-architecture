@@ -1,5 +1,5 @@
-import { Role, RoleHasPermission } from '../../infrastructure/database/prisma/generated/client';
-import { RoleScalarFieldEnum } from '../../infrastructure/database/prisma/generated/internal/prismaNamespace';
+import { Role, RoleHasPermission } from '../../../infrastructure/database/prisma/generated/client';
+import { RoleScalarFieldEnum } from '../../../infrastructure/database/prisma/generated/internal/prismaNamespace';
 import { IPermission } from './permission';
 import { IUser, IUserHasRole } from './user';
 

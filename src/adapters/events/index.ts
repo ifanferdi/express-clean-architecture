@@ -1,5 +1,5 @@
-import { Repositories } from '../../repositories/repository.interface';
-import { UseCases } from '../../use-cases/use-case.interface';
+import { Repositories } from '../../domain/repositories/repository.interface';
+import { UseCases } from '../../domain/use-cases/use-case.interface';
 import { UserEvent } from './user-event';
 
 export default class EventListener {

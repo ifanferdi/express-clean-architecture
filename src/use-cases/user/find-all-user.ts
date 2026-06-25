@@ -1,4 +1,4 @@
-import { IUser } from '../../domain/entities/user';
+import { IUser } from '../../domain/entities/models/user';
 import paginate from '../../helpers/paginate.helper';
 import { FindAllUserDto } from '../../validations/user-validation';
 import BaseUseCase from '../_base-use-case';

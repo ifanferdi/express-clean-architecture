@@ -1,4 +1,4 @@
-import Dashboard from '../dashboard';
+import Dashboard from '../../use-cases/common/dashboard';
 
 export interface CommonUseCase {
   dashboard: Dashboard;

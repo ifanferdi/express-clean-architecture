@@ -1,6 +1,6 @@
 import * as http from 'http';
 import { Server } from 'socket.io';
-import { UseCases } from '../../use-cases/use-case.interface';
+import { UseCases } from '../../domain/use-cases/use-case.interface';
 import socketIoHandlers from './handlers';
 
 export default class SocketIoServer {

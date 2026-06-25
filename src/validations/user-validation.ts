@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { USER_FIELD } from '../domain/entities/user';
-import { UserRelation } from '../domain/enums/user.enum';
-import { SoftDeleteFields } from '../domain/types/database.types';
+import { UserRelation } from '../domain/entities/enums/user.enum';
+import { USER_FIELD } from '../domain/entities/models/user';
+import { SoftDeleteFields } from '../domain/entities/types/database.types';
 import { calculateAge } from '../helpers/common.helper';
 import AppError from '../helpers/error.helper';
 import { Gender } from '../infrastructure/database/prisma/generated/enums';

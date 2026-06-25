@@ -2,7 +2,7 @@ import e from 'express';
 import asyncHandler from 'express-async-handler';
 import config from '../../../config/config';
 import { HttpStatusCode } from '../../../constants/http-status.constant';
-import { FileType } from '../../../domain/types/storage.types';
+import { FileType } from '../../../domain/entities/types/storage.types';
 import { handleNumberOrArrayRequest, handleOrderByRequest } from '../../../helpers/common.helper';
 import uploadFile from '../../../helpers/multer.helper';
 import { BaseFindById } from '../../../validations/base-validation';

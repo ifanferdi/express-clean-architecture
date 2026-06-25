@@ -1,5 +1,5 @@
-import { IUser } from '../../domain/entities/user';
-import { UserRelation } from '../../domain/enums/user.enum';
+import { UserRelation } from '../../domain/entities/enums/user.enum';
+import { IUser } from '../../domain/entities/models/user';
 import { ErrorNotFound } from '../../helpers/error.helper';
 import { FindAllUserDto, FindByIdUserDto } from '../../validations/user-validation';
 import BaseUseCase from '../_base-use-case';

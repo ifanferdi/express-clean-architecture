@@ -1,4 +1,4 @@
-import { IPermission } from '../../domain/entities/permission';
+import { IPermission } from '../../domain/entities/models/permission';
 import paginate from '../../helpers/paginate.helper';
 import { FindAllPermissionDto } from '../../validations/permission-validation';
 import BaseUseCase from '../_base-use-case';

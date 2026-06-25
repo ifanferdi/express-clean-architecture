@@ -1,4 +1,4 @@
-import { IRole } from '../../domain/entities/role';
+import { IRole } from '../../domain/entities/models/role';
 import paginate from '../../helpers/paginate.helper';
 import { FindAllRoleDto } from '../../validations/role-validation';
 import BaseUseCase from '../_base-use-case';

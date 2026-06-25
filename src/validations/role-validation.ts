@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { z } from 'zod';
-import { ROLE_FIELD } from '../domain/entities/role';
-import { RoleRelation } from '../domain/enums/role.enum';
+import { RoleRelation } from '../domain/entities/enums/role.enum';
+import { ROLE_FIELD } from '../domain/entities/models/role';
 import { BaseFindById, BasePagination, NumberSchema, StringSchema } from './base-validation';
 
 const Relations = z.array(z.nativeEnum(RoleRelation)).optional();

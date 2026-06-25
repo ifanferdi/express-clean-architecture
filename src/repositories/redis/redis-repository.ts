@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import { RedisStore } from '../../domain/types/redis.types';
+import { RedisStore } from '../../domain/entities/types/redis.types';
+import { RedisClientType } from '../../domain/infrastuctures/redis.interfaces';
 import { isJsonValue } from '../../helpers/common.helper';
-import { RedisClientType } from '../../infrastructure/redis/interfaces/redis.interfaces';
 
 export default class RedisRepository {
   constructor(protected redis: RedisClientType) {}

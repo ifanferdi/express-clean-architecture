@@ -1,6 +1,6 @@
-import { ROLE_FIELDS_PRISMA } from '../../../domain/entities/role';
-import { USER_FIELD, USER_SELECT_FIELDS } from '../../../domain/entities/user';
-import { UserRelation } from '../../../domain/enums/user.enum';
+import { UserRelation } from '../../../domain/entities/enums/user.enum';
+import { ROLE_FIELDS_PRISMA } from '../../../domain/entities/models/role';
+import { USER_FIELD, USER_SELECT_FIELDS } from '../../../domain/entities/models/user';
 import { Prisma } from '../../../infrastructure/database/prisma/generated/client';
 import { FindAllUserDto, FindOneUserDto } from '../../../validations/user-validation';
 

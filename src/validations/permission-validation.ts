@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { PERMISSION_FIELD } from '../domain/entities/permission';
-import { PermissionRelation } from '../domain/enums/permission.enum';
+import { PermissionRelation } from '../domain/entities/enums/permission.enum';
+import { PERMISSION_FIELD } from '../domain/entities/models/permission';
 import { BaseFindById, BasePagination, NumberSchema, StringSchema } from './base-validation';
 
 // Permission Validation
