@@ -1,5 +1,5 @@
-import { PERMISSION_FIELD, PERMISSION_FIELDS } from '../../../domain/entities/permission';
-import { PermissionRelation } from '../../../domain/enums/permission.enum';
+import { PermissionRelation } from '../../../domain/entities/enums/permission.enum';
+import { PERMISSION_FIELD, PERMISSION_FIELDS } from '../../../domain/entities/models/permission';
 import { Prisma } from '../../../infrastructure/database/prisma/generated/client';
 import {
   FindAllPermissionDto,

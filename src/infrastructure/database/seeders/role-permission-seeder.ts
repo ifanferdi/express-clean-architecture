@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Seeder } from '../database.interface';
+import { Seeder } from '../../../domain/infrastuctures/database.interface';
 import permissionFactory from '../factories/permission-factory';
 import RoleFactory from '../factories/role-factory';
 import { Permission, PrismaClient } from '../prisma/generated/client';

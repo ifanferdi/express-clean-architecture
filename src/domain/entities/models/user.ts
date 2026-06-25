@@ -1,9 +1,13 @@
 import _ from 'lodash';
-import { Profile, User, UserHasRole } from '../../infrastructure/database/prisma/generated/client';
+import {
+  Profile,
+  User,
+  UserHasRole,
+} from '../../../infrastructure/database/prisma/generated/client';
 import {
   ProfileScalarFieldEnum,
   UserScalarFieldEnum,
-} from '../../infrastructure/database/prisma/generated/internal/prismaNamespace';
+} from '../../../infrastructure/database/prisma/generated/internal/prismaNamespace';
 import { IPermission } from './permission';
 import { IRole } from './role';
 

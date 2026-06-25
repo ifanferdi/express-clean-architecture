@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { Repository } from '../../domain/repositories/database.interface';
 import { Prisma } from '../../infrastructure/database/prisma/generated/client';
 import {
   UserCreateInput,
@@ -13,7 +14,6 @@ import {
   UpdateUserProfileDto,
 } from '../../validations/user-validation';
 import DatabaseBaseRepository from './_database-base-repository';
-import { Repository } from './interfaces/database.interface';
 
 export default class UserRepository
   extends DatabaseBaseRepository

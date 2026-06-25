@@ -1,9 +1,9 @@
 import { faker } from '@faker-js/faker';
 import _ from 'lodash';
+import { Seeder } from '../../../domain/infrastuctures/database.interface';
 import { calculateAge } from '../../../helpers/common.helper';
 import * as argon2 from '../../../helpers/password.helper';
 import { CreateUserProfileDto } from '../../../validations/user-validation';
-import { Seeder } from '../database.interface';
 import { Gender, PrismaClient } from '../prisma/generated/client';
 
 export default class UserSeeder implements Seeder {

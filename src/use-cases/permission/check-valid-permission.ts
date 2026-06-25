@@ -1,4 +1,4 @@
-import { UserRelation } from '../../domain/enums/user.enum';
+import { UserRelation } from '../../domain/entities/enums/user.enum';
 import { CheckValidPermissionDto } from '../../validations/permission-validation';
 import BaseUseCase from '../_base-use-case';
 import FindByIdUser from '../user/find-by-id-user';

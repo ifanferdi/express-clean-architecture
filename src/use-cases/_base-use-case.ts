@@ -1,4 +1,4 @@
-import { Repositories } from '../repositories/repository.interface';
+import { Repositories } from '../domain/repositories/repository.interface';
 
 export default abstract class BaseUseCase {
   constructor(protected repositories: Repositories) {}

@@ -1,5 +1,5 @@
 import { Server } from 'socket.io';
-import { UseCases } from '../../../use-cases/use-case.interface';
+import { UseCases } from '../../../domain/use-cases/use-case.interface';
 
 export default function chatHandlers(io: Server, useCases: UseCases) {
   io.of('/chat').on('connection', (socket) => {

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { Repositories } from '../../repositories/repository.interface';
+import { Repositories } from '../../domain/repositories/repository.interface';
 import {
   RoleAssignPermissionDto,
   SyncByPermissionIdsDto,

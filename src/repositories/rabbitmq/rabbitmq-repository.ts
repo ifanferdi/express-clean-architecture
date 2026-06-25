@@ -1,9 +1,6 @@
 import { Channel } from 'amqplib';
+import { PublishQueue, SubscribeQueue } from '../../domain/infrastuctures/rabbitmq.interface';
 import { isError } from '../../helpers/error.helper';
-import {
-  PublishQueue,
-  SubscribeQueue,
-} from '../../infrastructure/rabbitmq/interfaces/rabbitmq.interface';
 
 export default class RabbitmqRepository {
   constructor(protected channel: Channel) {}

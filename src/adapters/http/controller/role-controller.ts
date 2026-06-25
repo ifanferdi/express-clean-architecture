@@ -1,8 +1,8 @@
 import e from 'express';
 import asyncHandler from 'express-async-handler';
 import { HttpStatusCode } from '../../../constants/http-status.constant';
+import { UseCases } from '../../../domain/use-cases/use-case.interface';
 import { handleNumberOrArrayRequest, handleOrderByRequest } from '../../../helpers/common.helper';
-import { UseCases } from '../../../use-cases/use-case.interface';
 import { BaseFindById } from '../../../validations/base-validation';
 import {
   CreateRoleDto,

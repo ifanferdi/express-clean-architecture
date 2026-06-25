@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { IPermission } from '../../../domain/entities/permission';
+import { IPermission } from '../../../domain/entities/models/permission';
 import { CreateRoleDto } from '../../../validations/role-validation';
 
 export default function RoleFactory(permissions: IPermission[]) {

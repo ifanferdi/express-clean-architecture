@@ -1,5 +1,5 @@
 import { Express } from 'express';
-import { Controllers } from '../controller/interfaces/controller.interface';
+import { Controllers } from '../../../domain/adapters/controller.interface';
 import PermissionRoutes from './permission.routes';
 import RoleRoutes from './role.routes';
 import UserRoutes from './user.routes';

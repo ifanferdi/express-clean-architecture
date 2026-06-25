@@ -1,4 +1,4 @@
-import { IRole } from '../../domain/entities/role';
+import { IRole } from '../../domain/entities/models/role';
 import { ErrorNotFound } from '../../helpers/error.helper';
 import { FindByIdRoleDto } from '../../validations/role-validation';
 import BaseUseCase from '../_base-use-case';

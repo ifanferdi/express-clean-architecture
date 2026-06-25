@@ -1,4 +1,4 @@
-import { UserRelation } from '../../domain/enums/user.enum';
+import { UserRelation } from '../../domain/entities/enums/user.enum';
 import { BaseFindById } from '../../validations/base-validation';
 import BaseUseCase from '../_base-use-case';
 
